@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast On-Demand</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Podcast On-Demand</h1>
+        <form id="podcastForm">
+            <label for="topic">Podcast Topic</label>
+            <input type="text" id="topic" name="topic" placeholder="Enter the podcast topic" required>
+
+            <label for="hostGender">Host Gender</label>
+            <select id="hostGender" name="hostGender" required>
+                <option value="" disabled selected>Select the host gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label for="hostTraits">Host Traits (Optional)</label>
+            <input type="text" id="hostTraits" name="hostTraits" placeholder="e.g., energetic, fun">
+
+            <label for="numberOfSpeakers">Number of Speakers</label>
+            <select id="numberOfSpeakers" name="numberOfSpeakers" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+
+            <div id="secondSpeakerOptions" class="second-speaker-container" style="display: none;">
+                <h3>Second Speaker Options</h3>
+
+                <label for="secondSpeakerGender">Second Speaker Gender</label>
+                <select id="secondSpeakerGender" name="secondSpeakerGender">
+                    <option value="" disabled selected>Select the second speaker gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+
+                <label for="secondSpeakerRole">Second Speaker Role</label>
+                <select id="secondSpeakerRole" name="secondSpeakerRole">
+                    <option value="" disabled selected>Select the second speaker role</option>
+                    <option value="Host">Host</option>
+                    <option value="Guest">Guest</option>
+                </select>
+
+                <label for="secondSpeakerTraits">Second Speaker Traits (Optional)</label>
+                <input type="text" id="secondSpeakerTraits" name="secondSpeakerTraits" placeholder="e.g., serious, thoughtful">
+            </div>
+
+            <button type="submit" id="submitButton" disabled>Submit</button>
+        </form>
+        <div id="output">
+            <h2>Podcast Result</h2>
+            <pre id="scriptOutput"></pre>
+            <audio id="audioOutput" controls></audio>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
