@@ -15,3 +15,7 @@ EXPOSE 80
 
 # Start Nginx in the foreground
 CMD ["nginx", "-g", "daemon off;"]
+
+# Docker Commands:.
+# docker build -t pod_frontend .
+# docker run --rm -p 80:80 pod_frontend
